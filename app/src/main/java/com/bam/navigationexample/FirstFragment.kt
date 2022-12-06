@@ -23,10 +23,14 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val adapter = NoteListAdapter()
+        adapter.items = NoteRepository.getAll()
+        binding.recyclerView.adapter = adapter
 
-        binding.button.setOnClickListener {
+        binding.addNoteBtn.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.action_firstFragment_to_secondFragment)
         }
+
     }
 
 }
