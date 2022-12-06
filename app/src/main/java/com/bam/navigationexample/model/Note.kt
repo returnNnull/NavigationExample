@@ -1,4 +1,4 @@
-package com.bam.navigationexample
+package com.bam.navigationexample.model
 
 import java.util.Date
 

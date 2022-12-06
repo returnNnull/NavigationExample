@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/firstFragment"
-        android:name="com.bam.navigationexample.FirstFragment"
+        android:name="com.bam.navigationexample.ui.FirstFragment"
         android:label="fragment_first"
         tools:layout="@layout/fragment_first" >
         <action
@@ -18,11 +18,15 @@
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.bam.navigationexample.SecondFragment"
+        android:name="com.bam.navigationexample.ui.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" >
         <action
             android:id="@+id/action_secondFragment_to_firstFragment"
             app:destination="@id/firstFragment" />
+        <argument
+            android:name="NOTE_ID"
+            app:argType="integer"
+            android:defaultValue="-1" />
     </fragment>
 </navigation>
